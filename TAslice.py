@@ -1,3 +1,12 @@
+"""
+Autor: Pablo Reyes
+Fecha: Octubre 2023
+Correo: pabloreyesg@gmail.com
+Descripción: Este script realiza ciertas operaciones relacionadas con el tiempo de adquisición de imágenes de resonancia magnética.
+
+"""
+
+#
 # El siguiene script esta basado en la version original de Chris Rorden 2019 para MATLAB
 # Se requiere ingresar:
 # TR = Tiempo de repetición
