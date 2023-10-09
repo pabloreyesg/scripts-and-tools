@@ -23,8 +23,8 @@ import sys
 # Redirige la salida estándar al archivo 'slicetiming.txt'
 sys.stdout = open('slicetiming.txt', 'w')
 
-TRsec = 3
-nSlices = 48
+TRsec = 3 #realice el cambio en esta sección y digite el TR de su secuencia.
+nSlices = 48 #realice el cambio de esta sección y digite el numero de cortes de sus secuencia.
 TA = TRsec / nSlices  # asume que no hay espacio temporal entre volúmenes
 bidsSliceTiming = np.arange(0, TRsec, TA)  # ascendente
 
