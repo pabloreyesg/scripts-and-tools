@@ -2,7 +2,9 @@
 Autor: Pablo Reyes
 Fecha: Octubre 2023
 Correo: pabloreyesg@gmail.com
-Descripción: Script en python para realizar inserción del slicetiming en un arvivo json, tiene interfaz grafica, es importante tener en cuenta que solo realiza la inserción de slicetiming y esta destinado a ser usado en conversiones de equipos philips
+Descripción: Script en python para realizar inserción del slicetiming en un arvivo json, tiene interfaz grafica, 
+es importante tener en cuenta que solo realiza la inserción de slicetiming y esta destinado a ser usado en conversiones 
+de equipos philips. Por default se realizará la inserción en la linea 13, esto se puede cambiar.
 """
 
 

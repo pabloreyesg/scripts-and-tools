@@ -2,7 +2,8 @@
 Autor: Pablo Reyes
 Fecha: Octubre 2023
 Correo: pabloreyesg@gmail.com
-Descripción: Este script realiza ciertas operaciones relacionadas con el tiempo de adquisición de imágenes de resonancia magnética.
+Descripción: Este script realiza ciertas operaciones relacionadas con el tiempo de adquisición 
+de imágenes de resonancia magnética. 
 
 """
 
