@@ -10,8 +10,6 @@ cd $to/$f
 tar -xvzf *.tar.gz
 mkdir sub-$f
 dicomsorter dcm sub-$f
-
-
  
 	
 done
