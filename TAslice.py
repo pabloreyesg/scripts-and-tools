@@ -23,15 +23,15 @@ import sys
 # Redirige la salida estándar al archivo 'slicetiming.txt'
 sys.stdout = open('slicetiming.txt', 'w')
 
-TRsec = 3 #realice el cambio en esta sección y digite el TR de su secuencia.
-nSlices = 48 #realice el cambio de esta sección y digite el numero de cortes de sus secuencia.
+TRsec = 2.5 #realice el cambio en esta sección y digite el TR de su secuencia.
+nSlices = 66 #realice el cambio de esta sección y digite el numero de cortes de sus secuencia.
 TA = TRsec / nSlices  # asume que no hay espacio temporal entre volúmenes
 bidsSliceTiming = np.arange(0, TRsec, TA)  # ascendente
 
-if False:  # En False significa que el orden sera ascendente, en True sera ascendente
+if False:  # En False significa que el orden sera ascendente, en True sera descendente
     bidsSliceTiming = np.flip(bidsSliceTiming)
 
-if False:  # Si esta en TRUE significa que hay intercalado o intervalar. Si esta en FALSE se omitirá.
+if True:  # Si esta en TRUE significa que hay intercalado o intervalar. Si esta en FALSE se omitirá.
     order = np.concatenate((np.arange(1, nSlices + 1, 2), np.arange(2, nSlices + 1, 2)))
     reorderedTiming = np.empty_like(bidsSliceTiming)
     reorderedTiming[order - 1] = bidsSliceTiming
