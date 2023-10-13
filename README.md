@@ -6,9 +6,9 @@ This scripts is a GUI to heudiconv. You need to copy the paths to original image
 ## slicecal.py
 Sometimes when you manage dicom images from Philips scanner the conversion to nifit with dcm23niix the slicetiming is missing. With this calculator you could have the section of slice timing to insert in yor json. You need to know TR, Slices and Order.
 
+![screenshotcal](slicecalimage.png)
 
-
-# scripts_DTI
+## Pipeline to work with CAMINO to estimate DTI
 Install CAMINO, FSL and ANTs
 
 
@@ -33,25 +33,25 @@ cd $path/$code/
 
 	cd $path/$code/DWI
 	
-# correction with FSL
+## correction with FSL
 
 	fsl5.0-eddy_correct $DWI data.nii.gz 1
 	cp xDTIhighisoSENSE_33.bvec bvecs
 	cp bvecs bvectemp
 	mv bvecs bvectemp
 
-# convert bvals and bvecs to Camino format 
+## convert bvals and bvecs to Camino format 
 
 	psc -r < bvectemp | sc -W% - > grad_dirs.txt
 	rm bvectemp	
 
-# BET extraction
+## BET extraction
 	fsl5.0-bet $DWI nodif_brain.nii.gz -f .3 -m
 
 	cp nodif_brain_mask.nii.gz $path/$code/CAMINO
 	cp grad_dirs.txt $path/$code/CAMINO
 
-# Model Estimation with Camino
+## Model Estimation with Camino
 	cd $path/$code/CAMINO
 
 	pointset2scheme -inputfile grad_dirs.txt -bvalue 1E9 -outputfile 4Ddwi_b_bvector.scheme
