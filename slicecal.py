@@ -1,7 +1,18 @@
+#title           :slicetiming calculator
+#description     :This script will calculate the slice timing based on TR, slices and order based on work of Function based on https://neurostars.org/t/heudiconv-no-extraction-of-slice-timing-data-based-on-philips-dicoms/2201/12
+#author		     :Pablo Reyes
+#date            :20231101
+#version         :0.1    
+#usage		     : python slicecal.py
+#notes           : copy and paste the result in your json,
+
+#==============================================================================
+
+
 import numpy as np
 import tkinter as tk
 
-# Function based on https://neurostars.org/t/heudiconv-no-extraction-of-slice-timing-data-based-on-philips-dicoms/2201/12
+# 
 def calcular_tiempo_de_corte():
     TRsec = float(tr_entry.get())
     nSlices = int(slices_entry.get())
