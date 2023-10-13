@@ -15,7 +15,7 @@ def convert_to_bids():
 
 # Crear la ventana principal
 window = tk.Tk()
-window.title("Bash to Python Converter")
+window.title("Dicom to BIDS Heudiconv")
 
 # Ajustar el ancho de la ventana
 window.geometry("400x200")
@@ -28,17 +28,17 @@ entry.pack()
 tk.Label(window, text="Directory for raw data:").pack()
 directory_raw = tk.Entry(window)
 directory_raw.pack()
-directory_raw.insert(0, "/media/pablo/Kirk/REDLATMA/raw")
+directory_raw.insert(0, "/media/pablo/Kirk/REDLATMA/raw") # chagen this
 
 tk.Label(window, text="Path to heuristic file:").pack()
 file_heuristic = tk.Entry(window)
 file_heuristic.pack()
-file_heuristic.insert(0, "/media/pablo/Kirk/REDLATMA/heuristic2023.py")
+file_heuristic.insert(0, "/media/pablo/Kirk/REDLATMA/heuristic2023.py") #change this
 
 tk.Label(window, text="Directory for BIDS data:").pack()
 directory_bids = tk.Entry(window)
 directory_bids.pack()
-directory_bids.insert(0, "/media/pablo/Kirk/REDLATMA/bids")
+directory_bids.insert(0, "/media/pablo/Kirk/REDLATMA/bids") #change this
 
 # Botón para ejecutar la conversión
 convert_button = tk.Button(window, text="Convert to BIDS", command=convert_to_bids)
