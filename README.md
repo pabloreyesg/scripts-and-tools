@@ -3,6 +3,9 @@
 ## heudiconv.py
 This scripts is a GUI to heudiconv. You need to copy the paths to original images, destinatios folder and your heuristic file. In the GUI you need to introduce the codes to convert into BIDS. Is just a silly tool with GUI to create a easy way to convert images based on Heudiconv.
 
+![screenshotheudi](heudiconimage.png)
+
+
 ## slicecal.py
 Sometimes when you manage dicom images from Philips scanner the conversion to nifit with dcm23niix the slicetiming is missing. With this calculator you could have the section of slice timing to insert in yor json. You need to know TR, Slices and Order.
 
